@@ -98,7 +98,8 @@ $(document).ready(function(){
         });
     });
     //新增窗口
-    $('#openAddDialog').click(function(){;
+    $('#openAddDialog').click(function(){
+        ("#fm").form('clear');
         $('#tt').tree({
             url:getContextPath()+"/role/addRightTree.do",
             checkbox:true,
@@ -110,7 +111,7 @@ $(document).ready(function(){
         $("#dlg").dialog("open").dialog("setTitle", "添加角色权限信息");
         url =  getContextPath() + "/role/add.do";
         $("#kv").validatebox("enableValidation");
-        $("#kv").attr("disabled","disabled");
+        $("#kv").removeAttr("disabled");
         $("#dlg").dialog({title: "添加角色权限信息",modal:true});
         $("#dlg").dialog("open");
     });

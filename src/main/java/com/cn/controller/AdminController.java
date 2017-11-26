@@ -130,8 +130,8 @@ public class AdminController extends BaseController{
             User user=(User)session.getAttribute("loginUser");
             RoleMenu roleMenu=new RoleMenu();
             roleMenu.setMenuId(parentId);
-            //roleMenu.setRoleId(user.getRoleId());
-            roleMenu.setRoleId("b89a21ffe0044a7f82112e2d686949aa");
+            roleMenu.setRoleId(user.getRole().getId());
+            //roleMenu.setRoleId("b89a21ffe0044a7f82112e2d686949aa");
             roleMenu.setMenuId(parentId);
             Map rootAttributes=new HashMap();
             rootAttributes.put("url","");
